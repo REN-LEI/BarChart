@@ -39,6 +39,8 @@ static CGFloat rightSpacing = 10;
     
     self.backgroundColor = [UIColor whiteColor];
     
+    self.uniformNumber = 100;
+    
     self.formatter = ^NSString *(NSNumber *value) {
         return [NSString stringWithFormat:@"%@",value];
     };
@@ -97,7 +99,7 @@ static CGFloat rightSpacing = 10;
     
         CGFloat w = (CGRectGetWidth(self.frame) - rightSpacing - leftW )/_yValues.count;
         
-        CGFloat h = (CGRectGetHeight(self.frame)-bottomH-topH)*(obj.floatValue/100);
+        CGFloat h = (CGRectGetHeight(self.frame)-bottomH-topH)*(obj.floatValue/_uniformNumber);
         
         CGFloat y = (CGRectGetHeight(self.frame)-h-bottomH);
         

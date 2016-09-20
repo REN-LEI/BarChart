@@ -28,6 +28,9 @@ typedef NSString *(^YDLabelFormatter)(NSNumber *yLabelValue);
 /// 显示规则
 @property (nonatomic, copy) YDLabelFormatter formatter;
 
+/// 柱状图等分比例默认按百分比等分 100
+@property (nonatomic, assign) NSInteger uniformNumber;
+
 /// 以动画的方式绘制图表
 - (void)strokeChart;
 
